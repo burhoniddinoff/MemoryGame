@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreen">
+    <fragment
+        android:id="@+id/gameScreen"
+        android:name="com.example.memorygame.presentation.screens.GameScreen"
+        android:label="GameScreen"
+        tools:layout="@layout/screen_game">
+
+        <argument
+            android:name="level"
+            app:argType="com.example.memorygame.data.LevelEnum" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/levelScreen"
+        android:name="com.example.memorygame.presentation.screens.LevelScreen"
+        android:label="LevelScreen"
+        tools:layout="@layout/screen_level">
+
+        <action
+            android:id="@+id/action_levelScreen_to_gameScreen"
+            app:destination="@id/gameScreen" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="com.example.memorygame.presentation.screens.SplashScreen"
+        android:label="SplashScreen"
+        tools:layout="@layout/screen_splash">
+
+        <action
+            android:id="@+id/action_splashScreen_to_levelScreen"
+            app:destination="@id/levelScreen"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:popUpTo="@layout/screen_splash"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+</navigation>
