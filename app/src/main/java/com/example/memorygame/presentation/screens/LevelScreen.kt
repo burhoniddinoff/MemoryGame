@@ -2,7 +2,6 @@ package com.example.memorygame.presentation.screens
 
 import android.os.Bundle
 import android.view.View
-import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
@@ -21,8 +20,7 @@ class LevelScreen : Fragment(R.layout.screen_level) {
 
         binding.easy.setOnClickListener { navController.navigate(LevelScreenDirections.actionLevelScreenToGameScreen(LevelEnum.EASY)) }
         binding.medium.setOnClickListener { navController.navigate(LevelScreenDirections.actionLevelScreenToGameScreen(LevelEnum.MEDIUM)) }
-        binding.hard.setOnClickListener {navController.navigate(LevelScreenDirections.actionLevelScreenToGameScreen(LevelEnum.HARD)) }
-
+        binding.hard.setOnClickListener { navController.navigate(LevelScreenDirections.actionLevelScreenToGameScreen(LevelEnum.HARD)) }
 
     }
 

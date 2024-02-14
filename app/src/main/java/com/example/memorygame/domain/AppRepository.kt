@@ -6,6 +6,6 @@ import kotlinx.coroutines.flow.Flow
 
 interface AppRepository {
 
-    fun getAllCardsByLevel(level : LevelEnum) : Flow<List<CardData>>
+    fun getAllCardsByLevel(level: LevelEnum): Flow<List<CardData>>
 
 }

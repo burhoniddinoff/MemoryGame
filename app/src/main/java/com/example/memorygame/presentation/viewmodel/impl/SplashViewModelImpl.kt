@@ -8,7 +8,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class SplashViewModelImpl @Inject constructor(): SplashViewModel, ViewModel() {
+class SplashViewModelImpl @Inject constructor() : SplashViewModel, ViewModel() {
 
     override fun openLevelScreen() {
         viewModelScope.launch {

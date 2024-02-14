@@ -132,4 +132,5 @@ class GameScreen : Fragment(R.layout.screen_game) {
         if (findCardCount == level.verCount * level.horCount)
             Toast.makeText(requireContext(), "Finish", Toast.LENGTH_SHORT).show()
     }
+
 }

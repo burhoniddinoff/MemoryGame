@@ -8,7 +8,6 @@
     tools:context="com.example.memorygame.presentation.screens.LevelScreen"
     tools:ignore="MissingDefaultResource">
 
-
     <ImageView
         android:id="@+id/easy"
         android:layout_width="150dp"
