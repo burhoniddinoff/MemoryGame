@@ -10,7 +10,7 @@
         android:name="com.example.memorygame.presentation.screens.GameScreen"
         android:label="GameScreen"
         tools:layout="@layout/screen_game">
-
+        
         <argument
             android:name="level"
             app:argType="com.example.memorygame.data.LevelEnum" />

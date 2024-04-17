@@ -4,131 +4,93 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg1"
+    android:background="@drawable/bg_screen_game"
+    android:id="@+id/root"
     tools:context="com.example.memorygame.presentation.screens.GameScreen">
 
-    <ImageView
-        android:id="@+id/step_bg"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="12dp"
-        android:src="@drawable/timer_bg"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/step"
+        android:id="@+id/time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="1"
+        android:background="@drawable/bg_time"
+        android:minHeight="40dp"
+        android:minWidth="60dp"
+        app:layout_constraintStart_toEndOf="@id/menu"
+        app:layout_constraintEnd_toStartOf="@id/reload"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginVertical="24dp"
+        android:textSize="18sp"
         android:textColor="@color/white"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@id/step_bg"
-        app:layout_constraintLeft_toLeftOf="@id/step_bg"
-        app:layout_constraintRight_toRightOf="@id/step_bg"
-        app:layout_constraintTop_toTopOf="@id/step_bg" />
+        android:text="2"
+        android:gravity="center"
+        />
 
-    <ImageView
-        android:id="@+id/reload"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_margin="16dp"
-        android:padding="8dp"
-        android:src="@drawable/reload"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
 
-    <ImageView
+
+    <androidx.cardview.widget.CardView
         android:id="@+id/menu"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_margin="16dp"
-        android:padding="8dp"
-        android:src="@drawable/menu"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent" />
-
-    <ImageView
-        android:id="@+id/setting"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_margin="16dp"
-        android:padding="8dp"
-        android:src="@drawable/setting"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/levelNumber"
-        android:layout_width="150dp"
-        android:layout_height="100dp"
-        android:src="@drawable/level_bg2"
+        android:layout_width="48dp"
+        android:layout_height="52dp"
+        android:layout_margin="24dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0.0px"
+        android:elevation="8dp"
+        app:cardBackgroundColor="#0C3582"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="10dp"
+        app:cardPreventCornerOverlap="false"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <LinearLayout
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="51dp"
+            android:background="@drawable/bg_blue"
+            android:gravity="top"
+            android:padding="10dp"
+            android:src="@drawable/ic_home" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/reload"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="@id/levelNumber"
-        app:layout_constraintLeft_toLeftOf="@id/levelNumber"
-        app:layout_constraintRight_toRightOf="@id/levelNumber"
-        app:layout_constraintTop_toTopOf="@id/levelNumber">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Level"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/levelText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="1/10"
-            android:textColor="@color/white"
-            android:textSize="16sp" />
-
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/attemptBg"
-        android:layout_width="150dp"
-        android:layout_height="100dp"
-        android:src="@drawable/level_bg2"
+        android:minWidth="48dp"
+        android:minHeight="52dp"
+        android:layout_margin="24dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0.0px"
+        android:elevation="8dp"
+        app:cardBackgroundColor="#0C3582"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="10dp"
+        app:cardPreventCornerOverlap="false"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <LinearLayout
-        android:id="@+id/rightContainer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="@id/attemptBg"
-        app:layout_constraintLeft_toLeftOf="@id/attemptBg"
-        app:layout_constraintRight_toRightOf="@id/attemptBg"
-        app:layout_constraintTop_toTopOf="@id/attemptBg">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            android:id="@+id/level"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Attempt"
+            android:minWidth="48dp"
+            android:minHeight="51dp"
+            android:background="@drawable/bg_blue"
+            android:gravity="center"
+            android:padding="10dp"
             android:textColor="@color/white"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/attempt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:textSize="18sp"
             android:text="1"
-            android:textColor="@color/white"
-            android:textSize="16sp" />
+            />
 
-    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/space"
@@ -136,12 +98,13 @@
         android:layout_height="0dp"
         android:layout_marginHorizontal="8dp"
         android:layout_marginTop="24dp"
-        app:layout_constraintBottom_toTopOf="@id/reload"
+        app:layout_constraintBottom_toTopOf="@id/container_volume"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rightContainer">
+        app:layout_constraintTop_toBottomOf="@id/time"
+        android:layout_marginBottom="16dp">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <RelativeLayout
             android:id="@+id/container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -152,5 +115,40 @@
             app:layout_constraintVertical_bias="0.5" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/container_volume"
+        android:layout_width="48dp"
+        android:layout_height="52dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="16dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0.0px"
+        android:elevation="8dp"
+        app:cardBackgroundColor="#0C3582"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="10dp"
+        app:cardPreventCornerOverlap="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/volume"
+            android:layout_width="48dp"
+            android:layout_height="51dp"
+            android:background="@drawable/bg_blue"
+            android:gravity="top"
+            android:padding="10dp"
+            android:src="@drawable/sound_on"
+            app:tint="@color/white"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

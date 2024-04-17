@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@drawable/bg_exit_dialog"
+    android:layout_margin="24dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="@dimen/s18"
+        android:text="@string/game_rule"
+        android:gravity="start"
+        android:includeFontPadding="false"
+        android:layout_marginTop="@dimen/d24"
+        android:layout_marginHorizontal="@dimen/d24"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="@dimen/s18"
+        android:fontFamily="@font/rubik_medium"
+        android:text="@string/gme_exit"
+        android:gravity="start"
+        android:layout_marginHorizontal="@dimen/d24"
+        android:includeFontPadding="false"
+        />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/yes_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/d24"
+            android:layout_marginTop="@dimen/d24"
+            android:layout_marginEnd="@dimen/d24"
+            android:layout_marginBottom="@dimen/d24"
+            android:background="@drawable/bg_red"
+            android:fontFamily="@font/rubik_medium"
+            android:gravity="center"
+            android:minWidth="70dp"
+            android:text="@string/yes"
+            android:textColor="@color/white"
+            android:textSize="@dimen/s20" />
+
+        <TextView
+            android:id="@+id/no_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no"
+            android:fontFamily="@font/rubik_extra_bold"
+            android:textSize="@dimen/s18"
+            android:textColor="@color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/d24"
+            android:layout_toStartOf="@id/yes_exit"
+            android:minWidth="70dp"
+            android:background="@drawable/bg_gradient_blue"
+            android:gravity="center"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

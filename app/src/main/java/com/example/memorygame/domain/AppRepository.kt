@@ -6,6 +6,7 @@ import kotlinx.coroutines.flow.Flow
 
 interface AppRepository {
 
-    fun getAllCardsByLevel(level: LevelEnum): Flow<List<CardData>>
+    fun checkOpens(openedImages: ArrayList<Int>) : Boolean
+    fun getImagesByLevel(level: LevelEnum): Flow<List<CardData>>
 
 }

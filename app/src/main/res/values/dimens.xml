@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="my_value">16dp</dimen>
+    <dimen name="d2">2dp</dimen>
+    <dimen name="d3">3dp</dimen>
+    <dimen name="d6">6dp</dimen>
+    <dimen name="d8">8dp</dimen>
+    <dimen name="d16">16dp</dimen>
+    <dimen name="d24">24dp</dimen>
+    <dimen name="d56dp">56dp</dimen>
+
+
+
+
+    <dimen name="s18">18sp</dimen>
+    <dimen name="s20">20sp</dimen>
+    <dimen name="s24">24sp</dimen>
+</resources>

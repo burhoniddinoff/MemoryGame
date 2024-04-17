@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">MemoryGame</string>
+    <string name="memory">MEMORY</string>
+    <string name="game">GAME</string>
+    <string name="game_title">PICTURE PUZZLE</string>
+    <string name="easy">Easy</string>
+    <string name="medium">Medium</string>
+    <string name="hard">Hard</string>
+    <string name="level">Level :</string>
+    <string name="attempts">Attempts:</string>
+    <string name="completed">Completed</string>
+    <string name="next">Next</string>
+    <string name="home">Home</string>
+    <string name="loading">Loading...</string>
+    <string name="game_rule">If you exit, the game ends</string>
+    <string name="gme_exit">You agree to leave ?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
 </resources>
